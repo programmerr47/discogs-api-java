@@ -10,7 +10,7 @@ import library.com.github.programmerr47.discogs.utils.InventorySortType;
  * @author Michael Spitsin
  * @since 2014-08-15
  */
-public class InventoryParams extends PaginationParams {
+public class GetInventoryParams extends PaginationParams {
     private static final String USERNAME_PARAM_NAME = "username";
     private static final String STATUS_PARAM_NAME = "status";
     private static final String SORT_PARAM_NAME = "sort";
@@ -21,7 +21,7 @@ public class InventoryParams extends PaginationParams {
     private InventorySortType sort;
     private InventorySortOrderType sortOrder;
 
-    protected InventoryParams(Builder builder) {
+    protected GetInventoryParams(Builder builder) {
         super(builder);
         this.username = builder.username;
         this.status = builder.status;
@@ -71,8 +71,8 @@ public class InventoryParams extends PaginationParams {
             return this;
         }
 
-        public InventoryParams build() {
-            return new InventoryParams(this);
+        public GetInventoryParams build() {
+            return new GetInventoryParams(this);
         }
     }
 }
