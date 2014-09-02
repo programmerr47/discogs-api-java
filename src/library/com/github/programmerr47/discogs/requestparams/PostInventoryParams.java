@@ -9,7 +9,7 @@ import library.com.github.programmerr47.discogs.utils.InventoryStatus;
  * <strong>See:</strong> http://www.discogs.com/developers/#page:marketplace,header:marketplace-listing-post
  *
  * @author Michael Spitsin
- * @since 2014-08-15
+ * @since 2014-09-02
  */
 @SuppressWarnings("unused")
 public class PostInventoryParams implements RequestParams {

@@ -22,27 +22,27 @@ public enum InventoryItemSleeveCondition {
             return null;
         } else {
             if (strRepresentation.equals(Constants.MINT)) {
-                return InventoryItemSleeveCondition.Mint;
+                return Mint;
             } else if (strRepresentation.equals(Constants.NEAR_MINT)) {
-                return InventoryItemSleeveCondition.NearMint;
+                return NearMint;
             } else if (strRepresentation.equals(Constants.VERY_GOOD_PLUS)) {
-                return InventoryItemSleeveCondition.VeryGoodPlus;
+                return VeryGoodPlus;
             } else if (strRepresentation.equals(Constants.VERY_GOOD)) {
-                return InventoryItemSleeveCondition.VeryGood;
+                return VeryGood;
             } else if (strRepresentation.equals(Constants.GOOD_PLUS)) {
-                return InventoryItemSleeveCondition.GoodPlus;
+                return GoodPlus;
             } else if (strRepresentation.equals(Constants.GOOD)) {
-                return InventoryItemSleeveCondition.Good;
+                return Good;
             } else if (strRepresentation.equals(Constants.FAIR)) {
-                return InventoryItemSleeveCondition.Fair;
+                return Fair;
             } else if (strRepresentation.equals(Constants.POOR)) {
-                return InventoryItemSleeveCondition.Poor;
+                return Poor;
             } else if (strRepresentation.equals(Constants.GENERIC)) {
-                return InventoryItemSleeveCondition.Generic;
+                return Generic;
             } else if (strRepresentation.equals(Constants.NOT_GRADED)) {
-                return InventoryItemSleeveCondition.NotGraded;
+                return NotGraded;
             } else if (strRepresentation.equals(Constants.NO_COVER)) {
-                return InventoryItemSleeveCondition.NoCover;
+                return NoCover;
             } else {
                 return null;
             }
@@ -55,6 +55,7 @@ public enum InventoryItemSleeveCondition {
         this.mRepresentation = representation;
     }
 
+    @Override
     public String toString() {
         return mRepresentation;
     }

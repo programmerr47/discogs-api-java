@@ -17,6 +17,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-08-17
  */
+//TODO add field that only "seller visible"
 public class InventoryItem {
     public static final String ID_TAG = "id";
     public static final String STATUS_TAG = "status";

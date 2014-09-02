@@ -9,7 +9,7 @@ import java.util.List;
  * Class for representing Discogs user inventory.
  *
  * @author Michael Spitsin
- * @since 2014-08-17
+ * @since 2014-09-02
  */
 @SuppressWarnings("unused")
 public class Inventory {

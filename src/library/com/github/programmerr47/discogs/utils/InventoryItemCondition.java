@@ -19,21 +19,21 @@ public enum InventoryItemCondition {
             return null;
         } else {
             if (strRepresentation.equals(Constants.MINT)) {
-                return InventoryItemCondition.Mint;
+                return Mint;
             } else if (strRepresentation.equals(Constants.NEAR_MINT)) {
-                return InventoryItemCondition.NearMint;
+                return NearMint;
             } else if (strRepresentation.equals(Constants.VERY_GOOD_PLUS)) {
-                return InventoryItemCondition.VeryGoodPlus;
+                return VeryGoodPlus;
             } else if (strRepresentation.equals(Constants.VERY_GOOD)) {
-                return InventoryItemCondition.VeryGood;
+                return VeryGood;
             } else if (strRepresentation.equals(Constants.GOOD_PLUS)) {
-                return InventoryItemCondition.GoodPlus;
+                return GoodPlus;
             } else if (strRepresentation.equals(Constants.GOOD)) {
-                return InventoryItemCondition.Good;
+                return Good;
             } else if (strRepresentation.equals(Constants.FAIR)) {
-                return InventoryItemCondition.Fair;
+                return Fair;
             } else if (strRepresentation.equals(Constants.POOR)) {
-                return InventoryItemCondition.Poor;
+                return Poor;
             } else {
                 return null;
             }
@@ -46,6 +46,7 @@ public enum InventoryItemCondition {
         this.mRepresentation = representation;
     }
 
+    @Override
     public String toString() {
         return mRepresentation;
     }
