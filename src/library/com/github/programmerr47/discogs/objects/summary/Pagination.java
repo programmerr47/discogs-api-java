@@ -9,6 +9,7 @@ import library.org.json.JSONObject;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class Pagination {
     public static final String PER_PAGE_TAG = "per_page";
     public static final String PAGE_COUNT_TAG = "pages";

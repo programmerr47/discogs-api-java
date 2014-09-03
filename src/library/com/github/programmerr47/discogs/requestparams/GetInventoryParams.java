@@ -10,6 +10,7 @@ import library.com.github.programmerr47.discogs.utils.InventorySortType;
  * @author Michael Spitsin
  * @since 2014-08-15
  */
+@SuppressWarnings("unused")
 public class GetInventoryParams extends PaginationParams {
     private static final String USERNAME_PARAM_NAME = "username";
     private static final String STATUS_PARAM_NAME = "status";

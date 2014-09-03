@@ -1,5 +1,11 @@
 package library.com.github.programmerr47.discogs.utils;
 
+import library.org.json.JSONArray;
+import library.org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Michael Spitsin
  * @since 2014-09-02
@@ -40,6 +46,23 @@ public enum OrderStatus {
             } else {
                 return null;
             }
+        }
+    }
+
+    public static List<OrderStatus> getFromJSONArray(JSONArray jsonArray) {
+        if (jsonArray == null) {
+            return null;
+        } else {
+            List<OrderStatus> statuses = new ArrayList<OrderStatus>();
+            for (int i = 0; i < jsonArray.length(); i++) {
+                String element = jsonArray.optString(i, null);
+
+                if (element != null) {
+                    statuses.add(getFromString(element));
+                }
+            }
+
+            return statuses;
         }
     }
 

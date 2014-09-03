@@ -12,6 +12,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-04
  */
+@SuppressWarnings("unused")
 public class SearchResult {
     public static final String PAGINATION_TAG = "pagination";
     public static final String ITEMS_TAG = "results";

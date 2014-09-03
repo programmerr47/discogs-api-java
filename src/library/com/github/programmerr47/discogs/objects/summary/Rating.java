@@ -9,6 +9,7 @@ import library.org.json.JSONObject;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class Rating {
     public static final String COUNT_TAG = "count";
     public static final String AVERAGE_TAG = "average";

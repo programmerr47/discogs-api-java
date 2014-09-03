@@ -11,6 +11,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class Community {
     public static final String HAVE_TAG = "have";
     public static final String WANT_TAG = "want";

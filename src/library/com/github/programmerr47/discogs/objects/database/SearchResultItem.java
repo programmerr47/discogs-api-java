@@ -13,6 +13,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class SearchResultItem {
     public static final String THUMB_TAG = "thumb";
     public static final String TITLE_TAG = "title";

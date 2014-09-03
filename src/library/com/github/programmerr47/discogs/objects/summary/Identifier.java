@@ -10,6 +10,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class Identifier {
     public static final String TYPE_TAG = "type";
     public static final String DESCRIPTION_TAG = "description";

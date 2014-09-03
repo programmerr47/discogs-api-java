@@ -13,6 +13,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-25
  */
+@SuppressWarnings("unused")
 public class Image {
     public static final String TYPE_TAG = "type";
     public static final String WIDTH_TAG = "width";

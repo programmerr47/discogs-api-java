@@ -12,6 +12,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class UserSummary {
     public static final String ID_TAG = "id";
     public static final String USERNAME_TAG = "username";

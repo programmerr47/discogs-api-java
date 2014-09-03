@@ -11,6 +11,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class Format {
     public static final String DESCRIPTIONS_TAG = "descriptions";
     public static final String NAME_TAG = "name";

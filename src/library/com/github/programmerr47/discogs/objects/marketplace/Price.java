@@ -8,6 +8,7 @@ import library.org.json.JSONObject;
  * @author Michael Spitsin
  * @since 2014-08-17
  */
+@SuppressWarnings("unused")
 public class Price {
     public static final String CURRENCY_TAG = "currency";
     public static final String VALUE_TAG = "value";

@@ -11,6 +11,7 @@ package library.com.github.programmerr47.discogs.requestparams;
  * @author Michael Spitsin
  * @since 2014-08-15
  */
+@SuppressWarnings("unused")
 public class PaginationParams implements RequestParams {
     private static final String CURRENT_PAGE_PARAM_NAME = "page";
     private static final String ITEMS_PER_PAGE_PARAM_NAME = "per_page";

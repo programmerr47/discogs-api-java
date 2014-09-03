@@ -49,7 +49,7 @@ public enum InventoryItemSleeveCondition {
         }
     }
 
-    private String mRepresentation;
+    private final String mRepresentation;
 
     private InventoryItemSleeveCondition(String representation) {
         this.mRepresentation = representation;

@@ -9,6 +9,7 @@ import library.com.github.programmerr47.discogs.utils.SearchType;
  * @author Michael Spitsin
  * @since 2014-08-15
  */
+@SuppressWarnings("unused")
 public class SearchParams extends PaginationParams{
     private static final String SEARCH_QUERY_PARAM_NAME = "query";
     private static final String TYPE_PARAM_NAME = "type";

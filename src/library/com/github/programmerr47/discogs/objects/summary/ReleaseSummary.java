@@ -9,6 +9,7 @@ import library.org.json.JSONObject;
  * @author Michael Spitsin
  * @since 2014-08-17
  */
+@SuppressWarnings("unused")
 public class ReleaseSummary {
     public static final String ID_TAG = "id";
     public static final String RESOURCE_URL_TAG = "resource_url";

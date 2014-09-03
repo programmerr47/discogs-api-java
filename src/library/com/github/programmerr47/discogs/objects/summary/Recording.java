@@ -12,6 +12,7 @@ import java.util.List;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class Recording {
     public static final String TITLE_TAG = "title";
     public static final String POSITION_TAG = "position";

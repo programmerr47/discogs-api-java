@@ -7,6 +7,7 @@ package library.com.github.programmerr47.discogs.requestparams;
  * @author Michael Spitsin
  * @since 2014-08-15
  */
+@SuppressWarnings("unused")
 public interface RequestParams {
 
     /**

@@ -40,7 +40,7 @@ public enum InventoryItemCondition {
         }
     }
 
-    private String mRepresentation;
+    private final String mRepresentation;
 
     private InventoryItemCondition(String representation) {
         this.mRepresentation = representation;

@@ -6,6 +6,7 @@ import library.org.json.JSONObject;
  * @author Michael Spitsin
  * @since 2014-07-27
  */
+@SuppressWarnings("unused")
 public class PaginationUrls {
     public static final String LAST_URL_TAG = "last";
     public static final String FIRST_URL_TAG = "first";

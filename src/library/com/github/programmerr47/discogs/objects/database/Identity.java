@@ -7,5 +7,7 @@ package library.com.github.programmerr47.discogs.objects.database;
  * Time: 22:19
  * To change this template use File | Settings | File Templates.
  */
+@SuppressWarnings("unused")
 public class Identity {
+    //TODO FINISH!
 }

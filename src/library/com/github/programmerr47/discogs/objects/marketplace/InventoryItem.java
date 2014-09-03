@@ -19,35 +19,35 @@ import java.util.List;
  */
 //TODO add field that only "seller visible"
 public class InventoryItem {
-    public static final String ID_TAG = "id";
-    public static final String STATUS_TAG = "status";
-    public static final String PRICE_TAG = "price";
-    public static final String ALLOW_OFFERS_TAG = "allow_offers";
-    public static final String SLEEVE_CONDITION_TAG = "sleeve_condition";
-    public static final String CONDITION_TAG = "condition";
-    public static final String POSTED_TAG = "posted";
-    public static final String SHIPS_FROM_TAG = "ships_from";
-    public static final String URI_TAG = "uri";
-    public static final String COMMENTS_TAG = "comments";
-    public static final String SELLER_TAG = "seller";
-    public static final String RELEASE_TAG = "release";
-    public static final String RESOURCE_URL_TAG = "resource_url";
-    public static final String AUDIO_TAG = "audio";
+    private static final String ID_TAG = "id";
+    private static final String STATUS_TAG = "status";
+    private static final String PRICE_TAG = "price";
+    private static final String ALLOW_OFFERS_TAG = "allow_offers";
+    private static final String SLEEVE_CONDITION_TAG = "sleeve_condition";
+    private static final String CONDITION_TAG = "condition";
+    private static final String POSTED_TAG = "posted";
+    private static final String SHIPS_FROM_TAG = "ships_from";
+    private static final String URI_TAG = "uri";
+    private static final String COMMENTS_TAG = "comments";
+    private static final String SELLER_TAG = "seller";
+    private static final String RELEASE_TAG = "release";
+    private static final String RESOURCE_URL_TAG = "resource_url";
+    private static final String AUDIO_TAG = "audio";
 
-    private String id;
-    private InventoryStatus status;
-    private boolean allowOffers;
-    private InventoryItemSleeveCondition sleeveCondition;
-    private InventoryItemCondition condition;
-    private String posted;
-    private String shipsFrom;
-    private String uri;
-    private String comments;
-    private String resourceUrl;
-    private boolean audio;
-    private Price price;
-    private UserSummary seller;
-    private ReleaseSummary release;
+    private final String id;
+    private final InventoryStatus status;
+    private final boolean allowOffers;
+    private final InventoryItemSleeveCondition sleeveCondition;
+    private final InventoryItemCondition condition;
+    private final String posted;
+    private final String shipsFrom;
+    private final String uri;
+    private final String comments;
+    private final String resourceUrl;
+    private final boolean audio;
+    private final Price price;
+    private final UserSummary seller;
+    private final ReleaseSummary release;
 
     private InventoryItem(Builder builder) {
         this.id = builder.id;
@@ -136,7 +136,7 @@ public class InventoryItem {
         return release;
     }
 
-    public static class Builder {
+    private static class Builder {
         private String id;
         private InventoryStatus status;
         private boolean allowOffers;
@@ -231,7 +231,7 @@ public class InventoryItem {
      * Creates {@link InventoryItem} object from its JSON Counterpart.
      *
      * @param jsonObject - given JSON object
-     * @return new instance of searchResult or null, if json is null
+     * @return new instance of listing or null, if json is null
      */
     public static InventoryItem getFromJSONObject(JSONObject jsonObject) {
         if (jsonObject == null) {
@@ -260,7 +260,7 @@ public class InventoryItem {
      * Creates list of {@link InventoryItem} objects from its JSON Counterpart.
      *
      * @param jsonArray - given JSON array
-     * @return new instance of searchResultItem or null, if json is null
+     * @return new instance of listings or null, if json is null
      */
     public static List<InventoryItem> getFromJSONArray(JSONArray jsonArray) {
         if (jsonArray == null) {
