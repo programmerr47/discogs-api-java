@@ -28,8 +28,8 @@ public class PaginationParams implements RequestParams {
     public String getQuery() {
         StringBuilder result = new StringBuilder();
 
-        ParamUtils.addIntegerParameterIfNeed(result, CURRENT_PAGE_PARAM_NAME, currentPage);
-        ParamUtils.addIntegerParameterIfNeed(result, ITEMS_PER_PAGE_PARAM_NAME, itemCountPerPage);
+        ParamUtils.addParameterIfNeed(result, CURRENT_PAGE_PARAM_NAME, currentPage);
+        ParamUtils.addParameterIfNeed(result, ITEMS_PER_PAGE_PARAM_NAME, itemCountPerPage);
 
         return ParamUtils.removeFirstCharacterIfDelimiter(result.toString());
     }

@@ -55,17 +55,17 @@ public class PostInventoryParams implements RequestParams {
     public String getQuery() {
         StringBuilder result = new StringBuilder();
 
-        ParamUtils.addIntegerParameterIfNeed(result, RELEASE_ID_PARAM_NAME, releaseId);
-        ParamUtils.addIntegerParameterIfNeed(result, CONDITION_PARAM_NAME, condition);
-        ParamUtils.addIntegerParameterIfNeed(result, SLEEVE_CONDITION_PARAM_NAME, sleeveCondition);
-        ParamUtils.addIntegerParameterIfNeed(result, PRICE_PARAM_NAME, price);
-        ParamUtils.addIntegerParameterIfNeed(result, COMMENTS_PARAM_NAME, comments);
-        ParamUtils.addIntegerParameterIfNeed(result, ALLOW_OFFERS_PARAM_NAME, allowOffers);
-        ParamUtils.addIntegerParameterIfNeed(result, STATUS_PARAM_NAME, status);
-        ParamUtils.addIntegerParameterIfNeed(result, EXTERNAL_ID_PARAM_NAME, externalId);
-        ParamUtils.addIntegerParameterIfNeed(result, LOCATION_PARAM_NAME, location);
-        ParamUtils.addIntegerParameterIfNeed(result, WEIGHT_PARAM_NAME, weight);
-        ParamUtils.addIntegerParameterIfNeed(result, FORMAT_QUANTITY_PARAM_NAME, formatQuantity);
+        ParamUtils.addParameterIfNeed(result, RELEASE_ID_PARAM_NAME, releaseId);
+        ParamUtils.addParameterIfNeed(result, CONDITION_PARAM_NAME, condition);
+        ParamUtils.addParameterIfNeed(result, SLEEVE_CONDITION_PARAM_NAME, sleeveCondition);
+        ParamUtils.addParameterIfNeed(result, PRICE_PARAM_NAME, price);
+        ParamUtils.addParameterIfNeed(result, COMMENTS_PARAM_NAME, comments);
+        ParamUtils.addParameterIfNeed(result, ALLOW_OFFERS_PARAM_NAME, allowOffers);
+        ParamUtils.addParameterIfNeed(result, STATUS_PARAM_NAME, status);
+        ParamUtils.addParameterIfNeed(result, EXTERNAL_ID_PARAM_NAME, externalId);
+        ParamUtils.addParameterIfNeed(result, LOCATION_PARAM_NAME, location);
+        ParamUtils.addParameterIfNeed(result, WEIGHT_PARAM_NAME, weight);
+        ParamUtils.addParameterIfNeed(result, FORMAT_QUANTITY_PARAM_NAME, formatQuantity);
 
         return ParamUtils.removeFirstCharacterIfDelimiter(result.toString());
     }

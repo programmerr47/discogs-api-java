@@ -75,24 +75,24 @@ public class SearchParams extends PaginationParams{
     public String getQuery() {
         StringBuilder result = new StringBuilder(super.getQuery());
 
-        ParamUtils.addIntegerParameterIfNeed(result, SEARCH_QUERY_PARAM_NAME, searchQuery);
-        ParamUtils.addIntegerParameterIfNeed(result, TYPE_PARAM_NAME, type);
-        ParamUtils.addIntegerParameterIfNeed(result, TITLE_PARAM_NAME, title);
-        ParamUtils.addIntegerParameterIfNeed(result, RELEASE_TITLE_PARAM_NAME, releaseTitle);
-        ParamUtils.addIntegerParameterIfNeed(result, RELEASE_CREDIT_PARAM_NAME, releaseCredit);
-        ParamUtils.addIntegerParameterIfNeed(result, ARTIST_TITLE_PARAM_NAME, artistTitle);
-        ParamUtils.addIntegerParameterIfNeed(result, ARTIST_ANV_PARAM_NAME, artistANV);
-        ParamUtils.addIntegerParameterIfNeed(result, LABEL_TITLE_PARAM_NAME, labelTitle);
-        ParamUtils.addIntegerParameterIfNeed(result, GENRE_TITLE_PARAM_NAME, genreTitle);
-        ParamUtils.addIntegerParameterIfNeed(result, STYLE_QUERY_PARAM_NAME, styleTitle);
-        ParamUtils.addIntegerParameterIfNeed(result, RELEASE_COUNTRY_PARAM_NAME, releaseCountry);
-        ParamUtils.addIntegerParameterIfNeed(result, RELEASE_YEAR_PARAM_NAME, releaseYear);
-        ParamUtils.addIntegerParameterIfNeed(result, FORMAT_PARAM_NAME, format);
-        ParamUtils.addIntegerParameterIfNeed(result, CATALOG_NUMBER_PARAM_NAME, catalogNumber);
-        ParamUtils.addIntegerParameterIfNeed(result, BARCODE_PARAM_NAME, barcode);
-        ParamUtils.addIntegerParameterIfNeed(result, TRACK_TITLE_PARAM_NAME, track);
-        ParamUtils.addIntegerParameterIfNeed(result, SUBMITTER_PARAM_NAME, submitter);
-        ParamUtils.addIntegerParameterIfNeed(result, CONTRIBUTOR_PARAM_NAME, contributor);
+        ParamUtils.addParameterIfNeed(result, SEARCH_QUERY_PARAM_NAME, searchQuery);
+        ParamUtils.addParameterIfNeed(result, TYPE_PARAM_NAME, type);
+        ParamUtils.addParameterIfNeed(result, TITLE_PARAM_NAME, title);
+        ParamUtils.addParameterIfNeed(result, RELEASE_TITLE_PARAM_NAME, releaseTitle);
+        ParamUtils.addParameterIfNeed(result, RELEASE_CREDIT_PARAM_NAME, releaseCredit);
+        ParamUtils.addParameterIfNeed(result, ARTIST_TITLE_PARAM_NAME, artistTitle);
+        ParamUtils.addParameterIfNeed(result, ARTIST_ANV_PARAM_NAME, artistANV);
+        ParamUtils.addParameterIfNeed(result, LABEL_TITLE_PARAM_NAME, labelTitle);
+        ParamUtils.addParameterIfNeed(result, GENRE_TITLE_PARAM_NAME, genreTitle);
+        ParamUtils.addParameterIfNeed(result, STYLE_QUERY_PARAM_NAME, styleTitle);
+        ParamUtils.addParameterIfNeed(result, RELEASE_COUNTRY_PARAM_NAME, releaseCountry);
+        ParamUtils.addParameterIfNeed(result, RELEASE_YEAR_PARAM_NAME, releaseYear);
+        ParamUtils.addParameterIfNeed(result, FORMAT_PARAM_NAME, format);
+        ParamUtils.addParameterIfNeed(result, CATALOG_NUMBER_PARAM_NAME, catalogNumber);
+        ParamUtils.addParameterIfNeed(result, BARCODE_PARAM_NAME, barcode);
+        ParamUtils.addParameterIfNeed(result, TRACK_TITLE_PARAM_NAME, track);
+        ParamUtils.addParameterIfNeed(result, SUBMITTER_PARAM_NAME, submitter);
+        ParamUtils.addParameterIfNeed(result, CONTRIBUTOR_PARAM_NAME, contributor);
 
         return ParamUtils.removeFirstCharacterIfDelimiter(result.toString());
     }

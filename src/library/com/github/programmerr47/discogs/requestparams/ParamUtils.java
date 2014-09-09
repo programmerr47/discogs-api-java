@@ -23,7 +23,7 @@ class ParamUtils {
      * @return request parameters with new added parameter
      */
     @SuppressWarnings("unused")
-    static StringBuilder addIntegerParameterIfNeed(StringBuilder params, String paramName, Object paramValue) {
+    static StringBuilder addParameterIfNeed(StringBuilder params, String paramName, Object paramValue) {
         if (paramValue != null) {
             String correctParamValue;
             try {
@@ -49,7 +49,7 @@ class ParamUtils {
      * @return request parameters with new added parameter
      */
     @SuppressWarnings("unused")
-    static String addIntegerParameterIfNeed(String params, String paramName, Object paramValue) {
+    static String addParameterIfNeed(String params, String paramName, Object paramValue) {
         if (paramValue != null) {
             String correctParamValue;
             try {
