@@ -1,71 +1,68 @@
 package library.com.github.programmerr47.discogs.objects.marketplace;
 
+import library.com.github.programmerr47.discogs.objects.summary.OrderMessage;
 import library.com.github.programmerr47.discogs.objects.summary.Pagination;
-import library.org.json.JSONArray;
 import library.org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Class for representing Discogs user inventory.
- *
  * @author Michael Spitsin
- * @since 2014-09-02
+ * @since 2014-09-10
  */
 @SuppressWarnings("unused")
-public class Inventory {
+public class ListOrderMessages {
     public static final String PAGINATION_TAG = "pagination";
-    public static final String ITEMS_TAG = "listings";
+    public static final String MESSAGES_TAG = "messages";
 
     private Pagination pagination;
-    private List<InventoryItem> items;
+    private List<OrderMessage> orderMessages;
 
-    private Inventory(Builder builder) {
+    private ListOrderMessages(Builder builder) {
         this.pagination = builder.pagination;
-        this.items = builder.items;
+        this.orderMessages = builder.orderMessages;
     }
 
     public Pagination getPagination() {
         return pagination;
     }
 
-    public List<InventoryItem> getItems() {
-        return items;
+    public List<OrderMessage> getOrderMessages() {
+        return orderMessages;
     }
 
-    public static class Builder {
+    private static class Builder {
         private Pagination pagination;
-        private List<InventoryItem> items;
+        private List<OrderMessage> orderMessages;
 
         public Builder setPagination(Pagination pagination) {
             this.pagination = pagination;
             return this;
         }
 
-        public Builder setItems(List<InventoryItem> items) {
-            this.items = items;
+        public Builder setOrderMessages(List<OrderMessage> orderMessages) {
+            this.orderMessages = orderMessages;
             return this;
         }
 
-        public Inventory build() {
-            return new Inventory(this);
+        public ListOrderMessages build() {
+            return new ListOrderMessages(this);
         }
     }
 
     /**
-     * Creates {@link Inventory} object from its JSON Counterpart.
+     * Creates {@link ListOrderMessages} object from its JSON Counterpart.
      *
      * @param jsonObject - given JSON object
-     * @return new instance of inventory or null, if json is null
+     * @return new instance of listOrderMessages or null, if json is null
      */
-    public static Inventory getFromJSONObject(JSONObject jsonObject) {
+    public static ListOrderMessages getFromJSONObject(JSONObject jsonObject) {
         if (jsonObject == null) {
             return null;
         } else {
             return new Builder()
                     .setPagination(Pagination.getFromJSONObject(jsonObject.optJSONObject(PAGINATION_TAG)))
-                    .setItems(InventoryItem.getFromJSONArray(jsonObject.optJSONArray(ITEMS_TAG)))
+                    .setOrderMessages(OrderMessage.getFromJSONArray(jsonObject.optJSONArray(MESSAGES_TAG)))
                     .build();
         }
     }
