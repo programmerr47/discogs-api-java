@@ -23,6 +23,19 @@ import java.util.List;
 public abstract class ParserFromJSON<ParseResult> implements ParserFrom<ParseResult> {
 
     @Override
+    public ParseResult parseObjectFrom(String objectStr) {
+        JSONObject jsonObject = null;
+
+        try {
+            jsonObject = new JSONObject(objectStr);
+        } catch (JSONException ignored) {
+            ignored.printStackTrace();
+        }
+
+        return parseFromJSON(jsonObject);
+    }
+
+    @Override
     public final ParseResult parseObjectFrom(InputStream objectIS) {
         String objectStr = null;
 
@@ -48,6 +61,29 @@ public abstract class ParserFromJSON<ParseResult> implements ParserFrom<ParseRes
             ignored.printStackTrace();
         }
 
+        return parseFromJSON(jsonArray);
+    }
+
+    @Override
+    public final List<ParseResult> parseListFrom(InputStream arrayIS) {
+        String arrayStr = null;
+
+        try {
+            arrayStr = Util.getStringFromInputStream(arrayIS);
+        } catch (IOException ignored) {
+            ignored.printStackTrace();
+        }
+
+        return parseListFrom(arrayStr);
+    }
+
+    /**
+     * Gets {@link List} of objects from {@link JSONArray} that represented response with array of result objects.
+     *
+     * @param jsonArray response json
+     * @return list of objects if it can be even partially created (when part of jsonArray is valid and part is invalid) of null, if not
+     */
+    protected List<ParseResult> parseFromJSON(JSONArray jsonArray) {
         if (jsonArray == null) {
             return null;
         } else {
@@ -64,16 +100,12 @@ public abstract class ParserFromJSON<ParseResult> implements ParserFrom<ParseRes
         }
     }
 
-    @Override
-    public final List<ParseResult> parseListFrom(InputStream arrayIS) {
-        String arrayStr = null;
+    /**
+     * Gets object from {@link JSONObject} that represented response.
+     *
+     * @param jsonObject response json
+     * @return object if it can be even partially created (when part of jsonObject is valid and part is invalid) of null, if not
+     */
+    protected abstract ParseResult parseFromJSON(JSONObject jsonObject);
 
-        try {
-            arrayStr = Util.getStringFromInputStream(arrayIS);
-        } catch (IOException ignored) {
-            ignored.printStackTrace();
-        }
-
-        return parseListFrom(arrayStr);
-    }
 }
