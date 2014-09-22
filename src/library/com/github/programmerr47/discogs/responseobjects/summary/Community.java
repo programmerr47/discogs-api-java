@@ -1,8 +1,5 @@
 package library.com.github.programmerr47.discogs.responseobjects.summary;
 
-import library.Constants;
-import library.org.json.JSONObject;
-
 import java.util.List;
 
 /**
@@ -13,12 +10,6 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public class Community {
-    public static final String HAVE_TAG = "have";
-    public static final String WANT_TAG = "want";
-    public static final String RATING_TAG = "rating";
-    public static final String SUBMITTER_TAG = "submitter";
-    public static final String CONTRIBUTORS_TAG = "contributors";
-
     private int have;
     private int want;
     private Rating rating;
@@ -87,26 +78,6 @@ public class Community {
 
         public Community build() {
             return new Community(this);
-        }
-    }
-
-    /**
-     * Creates {@link Community} object from its JSON Counterpart.
-     *
-     * @param jsonObject - given JSON object
-     * @return new instance of community or null, if json is null
-     */
-    public static Community getFromJSONObject(JSONObject jsonObject) {
-        if (jsonObject == null) {
-            return null;
-        } else {
-            return new Builder()
-                    .setHave(jsonObject.optInt(HAVE_TAG, Constants.NO_ID))
-                    .setWant(jsonObject.optInt(WANT_TAG, Constants.NO_ID))
-                    .setRating(Rating.getFromJSONObject(jsonObject.optJSONObject(RATING_TAG)))
-                    .setSubmitter(UserSummary.getFromJSONObject(jsonObject.optJSONObject(SUBMITTER_TAG)))
-                    .setContributors(UserSummary.getFromJSONArray(jsonObject.optJSONArray(CONTRIBUTORS_TAG)))
-                    .build();
         }
     }
 }

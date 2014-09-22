@@ -1,10 +1,5 @@
 package library.com.github.programmerr47.discogs.responseobjects.summary;
 
-import library.JSONUtil;
-import library.org.json.JSONArray;
-import library.org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,10 +8,6 @@ import java.util.List;
  */
 @SuppressWarnings("unused")
 public class Format {
-    public static final String DESCRIPTIONS_TAG = "descriptions";
-    public static final String NAME_TAG = "name";
-    public static final String QTY_TAG = "qty";
-
     private List<String> descriptions;
     private String name;
     private String qty;
@@ -61,47 +52,6 @@ public class Format {
 
         public Format build() {
             return new Format(this);
-        }
-    }
-
-    /**
-     * Creates {@link Format} object from its JSON Counterpart.
-     *
-     * @param jsonObject - given JSON object
-     * @return new instance of format or null, if json is null
-     */
-    public static Format getFromJSONObject(JSONObject jsonObject) {
-        if (jsonObject == null) {
-            return null;
-        } else {
-            return new Builder()
-                    .setName(jsonObject.optString(NAME_TAG, null))
-                    .setQty(jsonObject.optString(QTY_TAG, null))
-                    .setDescriptions(JSONUtil.getStringList(jsonObject.optJSONArray(DESCRIPTIONS_TAG)))
-                    .build();
-        }
-    }
-
-    /**
-     * Creates list of {@link Format} objects from its JSON Counterpart.
-     *
-     * @param jsonArray - given JSON array
-     * @return new instance of format or null, if json is null
-     */
-    public static List<Format> getFromJSONArray(JSONArray jsonArray) {
-        if (jsonArray == null) {
-            return null;
-        } else {
-            List<Format> resultList = new ArrayList<Format>();
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObject = jsonArray.optJSONObject(i);
-
-                if (jsonObject != null) {
-                    resultList.add(getFromJSONObject(jsonObject));
-                }
-            }
-
-            return resultList;
         }
     }
 }
